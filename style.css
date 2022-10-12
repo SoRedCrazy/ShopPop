@@ -1,0 +1,535 @@
+html {
+	background-image:url(images/background2.jpg);
+  	/* rgba(227,221,221,0.7) */
+	background-attachment:fixed;
+	background-size:cover;
+	background-color:white;
+	color:black;
+	font-family:Arial,Helvetica,sans-serif;
+}
+.no_background {
+	background-image:none;
+}
+body {
+	margin:0;
+	padding:0;
+}
+.header {
+	height:150px;
+	background-color:#DCDCDC;
+	margin:0;
+	padding:0;
+	width:100%;
+	border-bottom:solid rgb(254,206,13) 2px;
+	animation: 1s ease animationheader;
+	-webkit-box-shadow: 1px 1px 10px 1px black;
+	-moz-box-shadow: 1px 1px 10px 1px black;
+	box-shadow: 1px 1px 10px 1px black;
+}
+
+@keyframes animationheader{
+	0%{
+		top: -100px;
+	}
+	100%{
+		top:0.01vw;
+	}
+}
+.link_client {
+	text-align:right;
+	padding-right:10px;
+	padding-top:5px;
+	background-color:rgb(254,206,13);
+	height:30px;
+	border-bottom:solid #ADADAD 2px;
+}
+.link_pages {
+	padding-top:25px;
+	text-align:center;
+	font-size:20px;
+}
+.logo {
+	width:120px;
+	float:left;
+	margin-left:20px;
+	margin-top:0;
+	padding-top:15px;
+	border-radius:50%;
+	transition:width 150ms;
+}
+.logo:hover {
+	width:130px;
+}
+.link_pages a {
+	text-decoration:none;
+	color:black;
+	font-weight:bold;
+	padding:15px;
+	transition:150ms;
+	border:solid 2px #ADADAD;
+	height:100%;
+	border-radius:10%;
+}
+.link_pages a:hover {
+	text-decoration:underline;
+	font-size:25px;
+}
+.link_client a {
+	text-decoration:none;
+	color:black;
+	font-weight:bold;
+	transition:150ms;
+}
+.link_client a:hover {
+	text-decoration:underline;
+	font-size:19px;
+}
+.footer {
+	color:black;
+	width:100%;
+	height:50px;
+	background-color:#DCDCDC;
+	position:relative;
+	bottom:0;
+	border-top:solid rgb(254,206,13) 3px;
+	transition:height 150ms;
+	-webkit-box-shadow: -1px -1px 10px 1px black;
+	-moz-box-shadow: -1px -1px 10px 1px black;
+	box-shadow: -1px -1px 10px 1px black;
+}
+
+.footer:hover{
+	height:120px;
+	background-color:#DCDCDC;
+}
+
+.creation {
+	float:right;
+	bottom:0;
+	margin-right:10px;
+}
+.link_footer {
+	margin-left:10px;
+	float:left;
+}
+.footer a {
+	color:black;
+	text-decoration:none;
+}
+.footer a:hover {
+	color:yellow;
+	text-decoration:underline;
+}
+ul {
+	list-style:none;
+	margin:0;
+}
+.header {
+	position:relative;
+}
+.footer {
+	position:fixed;
+	bottom:0;
+}
+/* Diaporama d'arrière-plan */
+.diaporama, .diaporama:after {
+	position:fixed;
+	width:100%;
+	height:100%;
+	top:0px;
+	left:0px;
+	z-index:0;
+}
+.diaporama li span {
+	width:100%;
+	height:100%;
+	position:absolute;
+	top:0px;
+	left:0px;
+	color:transparent;
+	background-size:cover;
+	background-position:50% 50%;
+	background-repeat:none;
+	opacity:0;
+	z-index:0;
+	/* On peut changer la première valeur de temps comme on le veux */
+	animation:imageAnimation 18s linear infinite 0s;
+}
+/* Déclaration des images (ici provisoires) et du délai d'apparition */
+.diaporama li:nth-child(1) span {
+	background-image:url(images/promo.jpg);
+}
+.diaporama li:nth-child(2) span {
+	background-image:url(images/nouveau.png);
+	animation-delay:6s;
+}
+.diaporama li:nth-child(3) span {
+	background-image:url(images/livraison.jpg);
+
+	animation-delay:12s;
+}
+/*Des 'keyframes' pour pouvoir animer.
+ *Modifier les délais des images revient à recalculer les pourcentages :
+ *Nous avons 6 images, qui s'anniment en 16 secondes.
+ * 	6/16=0,33 => 33% et comme on ne souhaite pas que les images disparaissent
+ * 	complètement, on prend 17%, 33% puis 33+17=50%*/
+@keyframes imageAnimation {
+	0% {
+		opacity:0;
+		animation-timing-function:ease-in;
+	}
+	17% {
+		opacity:1;
+		animation-timing-function:ease-out;
+	}
+	33% {opacity:1;}
+	50% {opacity:0;}
+	100% {opacity:0;}
+}
+.button_connection {
+	margin-top:20px;
+}
+.button_connection button {
+	background-color:rgb(254,206,13);
+	font-size:14pt;
+}
+.button_inscription {
+	margin-top:20px;
+}
+.button_inscription button {
+	background-color:rgb(254,206,13);
+	font-size:14pt;
+}
+.centre {
+	margin:0 auto;
+	width:1024px;
+	height:100%;
+	text-align:center;
+	color:black;
+	line-height:170%;
+	padding-bottom: 50px;
+}
+.contact {
+	margin:auto;
+	width:300px;
+}
+.contenu_global {
+
+	width:100%;
+	background-color:rgba(0,0,0,0);
+	height:80%;
+	font-size:14pt;
+	margin-bottom: 350px;
+
+
+}
+.contenu_anime {
+
+	width:100%;
+	background-color:rgba(0,0,0,0);
+	height:80%;
+	font-size:14pt;
+	margin-bottom: 80%;
+
+
+}
+
+
+.error {
+	text-align:center;
+	width:360px;
+}
+.monospace {
+	font-family:'Courier New', Courier, monospace;
+	padding-bottom:200px;
+}
+input {
+	background-color:#dcdcdc;
+	width:200px;
+	height:20px;
+	border-color:white;
+	border-radius:5px;
+}
+textarea {
+	background-color:#dcdcdc;
+	width:200px;
+	height:200px;
+	border-color:white;
+	border-radius:5px;
+}
+.checkbox_inscription_cgu input {
+	width:20px;
+}
+form {
+	margin-bottom:50px;
+}
+info{
+  width: 300PX;
+}
+#card_numero{
+  width: 20%;
+  border: solid 2px #0E3C87;
+  height: 20px;
+  border-radius: 4px;
+  margin: 2px;
+  margin-bottom:  20px;
+
+}
+#first_name{
+  width: 15%;
+  border: solid 2px #0E3C87;
+  height: 20px;
+  border-radius: 4px;
+  margin: 2px;
+  margin-bottom: 20px;
+
+
+}
+#card_date{
+  width: 40px;
+  border: solid 2px #0E3C87;
+  height: 20px;
+  border-radius: 4px;
+  margin: 2px;
+  margin-bottom: 20px;
+
+}
+#card_pyctogramme{
+  width: 40px;
+  border: solid 2px #0E3C87;
+  height: 20px;
+  border-radius: 4px;
+  margin: 2px;
+  margin-bottom: 20px;
+
+}
+
+
+#payer{
+  width: 35%;
+  background-color: #0E3C87;
+  height: 50px;
+  color: white;
+}
+
+.layoutproduit{
+margin-bottom: auto  ;
+margin-top: 20px;
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-gap: 2%;
+padding-bottom: 200px ;
+}
+
+.produit a {
+	font-weight: bold ;
+	color : slateblue ;
+	text-decoration: none ;
+}
+
+.produit a:hover {
+	font-weight: bold ;
+	color : slateblue ;
+	text-decoration: underline;
+}
+
+.produitpanier {
+	font-weight: bold ;
+	color : black ;
+	text-decoration: none ;
+}
+
+.produitpanier:hover {
+	font-weight: bold ;
+	color : black ;
+	text-decoration: underline;
+}
+
+.bouton_commander {
+	border : solid , 1px ,  black ;
+   background-color: gold;
+   width:130px ;
+}
+
+.table_commande {
+
+   border : 10px , solid , darkslateblue ;
+   text-align: center;
+   vertical-align: middle;
+}
+
+
+.table_taille {
+   width : 100% ;
+   text-align: center;
+}
+
+.td_alignleft {
+text-align: left;
+}
+
+.td_alignright {
+text-align: right ;
+}
+
+.table_taille tbody tr td  {
+	padding: 20px;
+	width: 50%;
+}
+
+.color_title {
+   padding : 10px ;
+   background-color: gold ;
+   width : 30% ;
+   margin : auto ;
+}
+
+.image_panier {
+width: 35% ;
+}
+.corbeille{
+	width: 40px;
+	height: 40px;
+}
+
+@media only screen and (max-width:768px) {
+
+	.logo {
+		display:none;
+	}
+	.link_client {
+		text-align:center;
+		background-color:rgb(254,206,13);
+		height:30px;
+		border-bottom:solid #ADADAD 2px;
+	}
+	.link_pages a {
+		text-decoration:none;
+		color:black;
+		font-weight:bold;
+		padding:15px;
+		border:solid 2px #ADADAD;
+		height:100%;
+		border-radius:10%;
+	}
+	.link_pages a:hover {
+		text-decoration:underline;
+	}
+
+
+
+	.link_pages {
+		padding-top:5px;
+		text-align:center;
+		font-size:18px;
+	}
+	.link_pages a {
+		text-decoration:none;
+		color:black;
+		font-weight:bold;
+		padding:10px;
+		border:solid 2px #ADADAD;
+		height:100%;
+		border-radius:10%;
+	}
+	.link_pages a:hover {
+		text-decoration:underline;
+		font-size:inherit;
+	}
+	.header {
+		position:relative;
+		height:115px;
+	}
+	.footer {
+		height:30px;
+	}
+	.footer:hover{
+		height:140px;
+		background-color:#DCDCDC;
+	}
+	.link_footer p {
+		margin-top:5px;
+	}
+	.creation {
+		display:none
+	}
+	.link_client a:hover {
+		text-decoration:underline;
+		font-size:inherit;
+	}
+
+
+
+	.centre {
+		margin: 100px auto;
+		padding-left: 10px;
+		padding-right: 10px;
+		padding-top: 10px ;
+		padding-bottom: 100px ;
+		width:auto;
+		height:100%;
+		text-align:center;
+		color:black;
+		line-height:170%;
+	}
+
+
+
+	input {
+		background-color:#dcdcdc;
+		width:80%;
+		height:20px;
+		border-color:white;
+		border-radius:5px;
+	}
+	textarea {
+		background-color:#dcdcdc;
+		width:80%;
+		height:267px;
+		border-color:white;
+		border-radius:5px;
+	}
+	.checkbox_inscription_cgu input {
+		width:20px;
+	}
+	.layoutproduit{
+		margin-bottom: 200px ;
+		margin-top: 20px;
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		grid-gap : 0 ;
+		padding-bottom: 200px ;
+	}
+	.layoutproduit img {
+		width:100%;
+	}
+	.photo img {
+		width:100%;
+	}
+	.table_taille {
+	   width:90%;
+	   text-align:center;
+	}
+	.image_panier {
+		display:none;
+	}
+	.table_taille tbody tr td  {
+		padding: 10px;
+		width: 50%;
+	}
+	#card_numero{
+	  width: 90%;
+	}
+	#first_name{
+	  width: 90%;
+	}
+	#card_date{
+	  width: 90%;
+	}
+	#card_pyctogramme{
+	  width: 90%;
+	}
+	#payer{
+	  width: 90%;
+	}
+}
