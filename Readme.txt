@@ -1,4 +1,4 @@
-Joey Bernard - Julien Boisgard - Selim Ergun - Sean Fauvel - Hippolyte Vangaeveren - Yago Volovitch
+Joey B - Julien B - Selim E - Sean F - Hippolyte V - Yago V
 La base de données remplie est dans sql.
 Les parametres de base de données est dans function/db.php 
 
